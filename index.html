@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why doesn’t Section-2 have sub-sections?</title>
+    
+    <!-- External Resources -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #dc1a22;
+            --dark-gray: #2a2a2a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .watermark {
+            position: fixed;
+            top: 21px;
+            left: 21px;
+            color: var(--primary-color);
+            font-size: 0.8em;
+            background: rgba(255, 255, 255, 1);
+            padding: 6px 8px;
+            border-radius: 8px;
+            border: 2px solid var(--primary-color);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-align: center;
+            width: 100%;
+        }
+
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            animation: fadeIn 0.5s;
+        }
+
+        .article-section {
+            flex: 0 0 60%;
+            padding: 40px;
+            background: white;
+            text-align: justify;
+        }
+
+        .svg-section {
+            flex: 0 0 40%;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .svg-section img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+
+        .content {
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        blockquote {
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+            font-style: italic;
+            margin: 20px 0;
+            color: #666;
+            text-align: left;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+		@media (max-width: 768px) {
+			.container {
+				flex-direction: column;
+			}
+			
+			.article-section, .svg-section {
+				flex: 0 0 100%;
+			}
+			
+			.svg-section {
+				order: 1;
+				margin-top: 20px;
+			}
+			
+			.article-section {
+				order: 2;
+			}
+		}
+        .feedback-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: var(--primary-color);
+            color: white;
+            font-size: 12px;
+            padding: 10px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.3s;
+        }
+
+        .feedback-button:hover {
+            transform: scale(1.05);
+        }
+		
+		.squircle-highlight {
+			background-color: #dc1a22;
+			color: white;
+			padding: 15px;
+			border-radius: 20px;
+			margin-top: 15px;
+		}
+    </style>
+</head>
+<body>
+    <div class="watermark" id="watermark">Made by Beema's Fincon</div>
+
+    <h1>Why doesn’t Section-2 have sub-sections?</h1>
+
+    <div class="container">
+        <div class="article-section">
+            <div class="content">
+                <p>To ensure readability, comprehension, and easy referencing, every Act in our country Bharat adheres to a three-tier structure. The second and third tiers are introduced with auxiliary components labelled with the prefix "Sub," aimed at supporting the primary section. These "Sub" elements are utilized when the main section is unable to provide a comprehensive explanation.</p>
+				<p> </p>
+                <blockquote>Simply put, if a Section can effectively convey its purpose right after its numeric designation (e.g., 1, 2, 3...), it operates autonomously and does not require additional components like Sub-Sections. This same principle applies to Clauses.</blockquote>
+				<p> </p>
+                <p>For instance, in the Income Tax Act of 1961, Section 2 and Section 10 both feature text immediately following their numerals, indicating that the section is self-explanatory and does not necessitate supplementary elements to clarify its meaning. As a result, the numeric designations within parentheses (e.g., (1), (2), etc.) that follow a Section represent Clauses because these sections do not need extra elements to aid in their explanation.</p>
+				<p> </p>
+                <p>Conversely, any section lacking immediate explanatory text following its numeric designations (in the case of Sections) or lowercase alphabetical characters within parentheses (in the case of Clauses) depends on Sub-Sections and Sub-Clauses to express their intent.</p>
+				<p> </p>
+				<p class="squircle-highlight">Hence, in any Act, the subsequent level of Section 2 is designated as Clauses rather than Sub-Sections.</p>
+            </div>
+        </div>
+        <div class="svg-section">
+            <img src="hierarchy.svg" alt="Sections and Clauses Hierarchy">
+        </div>
+    </div>
+
+    <a href="mailto:bp.beema@outlook.com" class="feedback-button">
+        <i class="fas fa-comment-dots"></i> Feedback
+    </a>
+
+    <script>
+        document.getElementById('watermark').addEventListener('click', function() {
+            const overlay = document.createElement('div');
+            overlay.style.position = 'fixed';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100%';
+            overlay.style.height = '100%';
+            overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+            overlay.style.display = 'flex';
+            overlay.style.justifyContent = 'center';
+            overlay.style.alignItems = 'center';
+            overlay.style.zIndex = '1000';
+
+            const image = document.createElement('img');
+            image.src = 'https://drive.google.com/file/d/1chfrxZueGzNgTlmy8X94YSDBOIbyk3pK/view?usp=sharing';
+			image.onerror = function() {
+				image.src = 'https://lh3.googleusercontent.com/0rct8-ju3NVFWQMFemrb4l3RL2A0oyN5wmKl9McXvPkrzlJwlbf6UFkDQ9miaxYePAjggLDuOil0USnq2w=s265-w265-h265';}
+            image.style.maxWidth = '100%';
+            image.style.maxHeight = '100%';
+            image.style.transform = 'scale(2)';
+            image.style.transition = 'transform 0.5s';
+
+            overlay.appendChild(image);
+            document.body.appendChild(overlay);
+
+            overlay.onclick = function(e) {
+                if (e.target === overlay) {
+                    document.body.removeChild(overlay);
+                }
+            };
+        });
+    </script>
+</body>
+</html>
